@@ -13,14 +13,6 @@
 
   $_gdm_bg: lighten(#2e3436, 19%);
 
-  StEntry {
-    @if $variant=='dark' {
-      $_gdm_entry_bg: transparentize(lighten(desaturate(#241f31, 20%), 2%), 0.5);
-      background-color: $_gdm_entry_bg;
-      color: $osd_fg_color;
-    }
-  }
-
   .modal-dialog-button-box { spacing: 3px; }
   .modal-dialog-button {
     padding: 4px 18px;

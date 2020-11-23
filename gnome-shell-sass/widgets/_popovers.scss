@@ -43,7 +43,7 @@ $popover_arrow_height: 12px;
   }
 
   &.selected {
-    background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+    background-color: transparentize(white, 0.2);
     color: $fg_color;
   }
 
@@ -93,9 +93,6 @@ $popover_arrow_height: 12px;
     background-color: lighten($borders_color, 2%);
     .popup-sub-menu & { //submenu separators
       margin: 0 64px 0 32px;
-      @if $variant == 'dark' {
-        background-color: lighten($bg_color,10%);
-      }
     }
   }
 }

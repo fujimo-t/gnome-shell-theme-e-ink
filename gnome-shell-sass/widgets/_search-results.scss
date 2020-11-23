@@ -26,7 +26,7 @@
   border-radius: $modal_radius+3;
   border: 1px solid $osd_outer_borders_color;
   box-shadow: 0 2px 4px 0 $shadow_color;
-  text-shadow: 0 1px if($variant == 'light', rgba(255,255,255,0.2), rgba(0,0,0,0.2));
+  text-shadow: 0 1px  rgba(255,255,255,0.2);
   color: $osd_fg_color;
   padding: $base_padding * 3;
   // This is the space between the provider icon and the results container
