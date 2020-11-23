@@ -202,30 +202,16 @@
     color: $color;
   }
 
-  &:hover,
-  &:selected {
-    .overview-icon {
-      background-color: transparentize($color, .9);
-    }
-  }
-
-  &:focus {
-    .overview-icon {
-      background-color: transparentize($color, .7);
-      // border-color: $selected_bg_color;
-    }
-  }
-
-  &:drop {
-    .overview-icon {
-      background-color: transparentize($selected_bg_color, .15);
-    }
-  }
-
   &:active,
-  &:checked {
+  &:checked,
+  &:drop,
+  &:focus,
+  &:hover,
+  &:selected
+  {
     .overview-icon {
-      background-color: transparentize(darken($osd_bg_color, 10%), .5);
+      border: 1px solid black;
+      background-color: white;
     }
   }
 }
