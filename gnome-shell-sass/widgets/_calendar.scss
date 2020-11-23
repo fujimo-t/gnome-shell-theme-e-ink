@@ -100,7 +100,7 @@
     &:hover, &:focus { background-color: $hover_bg_color; }
     &:active,&:selected {
       color: lighten($fg_color,10%);
-      background-color: darken($bg_color,5%);
+      border: 1px solid $borders_color;
     }
 
     // day of week heading

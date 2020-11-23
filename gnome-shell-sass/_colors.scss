@@ -4,8 +4,8 @@ $fg_color:  #2e3436;
 
 $selected_fg_color: #fff;
 $selected_bg_color: #3584e4;
-$selected_borders_color: darken($selected_bg_color, 15%);
-$borders_color: darken($bg_color, 18%);
+$selected_borders_color: #000000;
+$borders_color: #000000;
 $borders_edge:  rgba(255,255,255,0.8);
 $link_color: darken($selected_bg_color, 10%);
 $link_visited_color: darken($selected_bg_color, 20%);
