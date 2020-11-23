@@ -5,7 +5,9 @@ $dash_spacing: $base_padding + 4px;
 $dash_border_radius: $modal_radius * 1.5;
 
 #dash {
-  @extend %overview_panel;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
   @include fontsize($base_font_size - 2);
   padding: ($dash_spacing / 2) 0;
 
@@ -48,13 +50,14 @@ $dash_border_radius: $modal_radius * 1.5;
 
 // Show apps button
 .show-apps {
-  @include overview-icon($osd_fg_color);
+  @include overview-icon(black);
 
   &:focus,
   &:checked {
     .overview-icon {
       background-color: darken($osd_bg_color,10%);
       color: $fg_color;
+      border: 1px solid black;
     }
   }
 }
