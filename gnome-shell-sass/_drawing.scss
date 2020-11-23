@@ -200,6 +200,7 @@
   .overview-icon {
     @extend %icon_tile;
     color: $color;
+    border: 1px solid transparent;
   }
 
   &:active,
