@@ -9,6 +9,7 @@ $panel_height: 1.86em;
 
 #panel {
   background-color: $panel_bg_color;
+  border: 1px solid black;
   font-weight: bold;
   height: $panel_height;
   font-feature-settings: "tnum";
