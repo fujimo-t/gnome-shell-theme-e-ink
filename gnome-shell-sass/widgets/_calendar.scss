@@ -63,10 +63,9 @@
 
   // month
   .calendar-month-label {
-    color: lighten($fg_color,5%);
+    color: black;
     font-weight: bold;
     padding: 8px 0;
-    &:focus {}
   }
 
   // prev/next month icons
@@ -76,12 +75,12 @@
   }
 
   .pager-button {
-    background-color: transparent;
+    background-color: white;
     height: 32px;
     width: 32px;
+    border: 1px solid white;
     border-radius: $base_border_radius;
-    &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
-    &:active { background-color: $active_bg_color; }
+    &:hover, &:focus, &:active { border: 1px solid black }
   }
 
 
@@ -97,16 +96,17 @@
     border-radius: $calendar_day_size * 0.5 + 2px;
     border: 1px solid transparent; //avoid jumparound due to today
     font-feature-settings: "tnum";
-    &:hover, &:focus { background-color: $hover_bg_color; }
+    color: black;
+    background-color: white;
     &:active,&:selected {
-      color: lighten($fg_color,10%);
-      border: 1px solid $borders_color;
+      border: 1px solid black;
+      margin: 0px;
     }
 
     // day of week heading
     &.calendar-day-heading {
-      color: lighten($fg_color,10%);
       margin-top: 1em;
+      color: black;
       @include fontsize($base_font_size - 4);
     }
   }
@@ -126,42 +126,27 @@
   .calendar-work-day {}
 
   .calendar-nonwork-day {
-    color: $insensitive_fg_color;
+    color: black;
   }
 
   // Today
   .calendar-today {
+    @extend .calendar-day-base;
     font-weight: bold;
-    border: 1px solid transparent;
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-
-    &:hover,&:focus {
-      background-color:lighten($selected_bg_color, 3%);
-      color: $selected_fg_color;
-    }
-
-    &:active,&:selected {
-      background-color: $selected_bg_color;
-      color: $selected_fg_color;
-
-      &:hover,&:focus {
-        background-color:lighten($selected_bg_color, 3%);
-        color: $selected_fg_color;
-      }
-    }
+    font-size: larger;
   }
 
   .calendar-day-with-events {
     background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
     &.calendar-work-day {
-       color: lighten($fg_color,10%);
+       color: black;
        font-weight: bold;
     }
   }
 
   .calendar-other-month-day {
-    color: transparentize($fg_color ,0.5);
+    color: black;
+    font-weight: lighter;
   }
 
   .calendar-week-number {
