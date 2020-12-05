@@ -16,7 +16,7 @@ $popover_arrow_height: 12px;
 // container of the popover menu
 .popup-menu {
   min-width: 15em;
-  color: $fg_color;
+  color: black;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
@@ -33,26 +33,16 @@ $popover_arrow_height: 12px;
 .popup-menu-item {
   spacing: $base_padding;
   padding: $base_padding;
+  border: 1px solid white;
 
   &:ltr { padding-right:1.75em; padding-left: 0; }
   &:rtl { padding-right: 0; padding-left:1.75em; }
 
-  &:checked {
-    background-color: lighten($bg_color, 2%);
-    box-shadow: none;
+  &.selected, &:active {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
   }
-
-  &.selected {
-    background-color: transparentize(white, 0.2);
-    color: $fg_color;
-  }
-
-  &:active { 
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-  }
-
-  &:insensitive { color: transparentize($fg_color,0.5);}
 }
 
 // all icons and other graphical elements
@@ -68,7 +58,7 @@ $popover_arrow_height: 12px;
 
 // popover submenus
 .popup-sub-menu {
-  background-color: darken($bg_color, 3%);
+  background-color: white;
   box-shadow: none;
   border-top: 1px solid transparentize($borders_color, 0.2);
   border-bottom: 1px solid transparentize($borders_color, 0.2);
