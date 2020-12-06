@@ -5,7 +5,7 @@ $popover_arrow_height: 12px;
 //.the popover itself
 .popup-menu-boxpointer {
   -arrow-border-radius: $base_border_radius+4;
-  -arrow-background-color: $bg_color;
+  -arrow-background-color: white;
   -arrow-border-width: 1px;
   -arrow-border-color: $borders_color;
   -arrow-base: $popover_arrow_height * 2;
@@ -17,6 +17,7 @@ $popover_arrow_height: 12px;
 .popup-menu {
   min-width: 15em;
   color: black;
+  background-color: white;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
@@ -31,6 +32,8 @@ $popover_arrow_height: 12px;
 
 // menu items
 .popup-menu-item {
+  background-color: white;
+  color: black;
   spacing: $base_padding;
   padding: $base_padding;
   border: 1px solid white;
@@ -39,17 +42,13 @@ $popover_arrow_height: 12px;
   &:rtl { padding-right: 0; padding-left:1.75em; }
 
   &.selected, &:active {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    border-color: black;
   }
 }
 
 // all icons and other graphical elements
 .popup-inactive-menu-item {
-  color: $fg_color;
-
-  &:insensitive { color: transparentize($fg_color,0.5); }
+  color: grey;
 }
 
 // symbolic icons in popover
@@ -58,10 +57,9 @@ $popover_arrow_height: 12px;
 
 // popover submenus
 .popup-sub-menu {
-  background-color: white;
   box-shadow: none;
-  border-top: 1px solid transparentize($borders_color, 0.2);
-  border-bottom: 1px solid transparentize($borders_color, 0.2);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 // container for radio and check boxes
