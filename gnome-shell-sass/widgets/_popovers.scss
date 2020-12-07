@@ -16,8 +16,6 @@ $popover_arrow_height: 12px;
 // container of the popover menu
 .popup-menu {
   min-width: 15em;
-  color: black;
-  background-color: white;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
@@ -28,6 +26,7 @@ $popover_arrow_height: 12px;
 
 .popup-menu-content {
   padding: $base_padding * 2 + $base_margin 0;
+  color: black;
 }
 
 // menu items
