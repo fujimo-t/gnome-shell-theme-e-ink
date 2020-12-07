@@ -51,7 +51,7 @@
 
   // date label
   .date-label {
-    @include fontsize($base_font_size+7);
+    @include fontsize($base_font_size+1);
     font-weight: 1000;
   }
 }
@@ -133,7 +133,6 @@
   .calendar-today {
     @extend .calendar-day-base;
     font-weight: bold;
-    font-size: larger;
   }
 
   .calendar-day-with-events {

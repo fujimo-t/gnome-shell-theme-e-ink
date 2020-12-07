@@ -111,7 +111,7 @@
   }
 }
 
-@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $borders_edge, $shadow: $shadow_color) {
+@mixin button($t, $c:white, $tc:black, $edge: $borders_edge, $shadow: $shadow_color) {
 //
 // Button drawing function
 //
@@ -137,8 +137,8 @@
   // normal button
   @if $t==normal {
     color: $tc;
-    background-color: lighten($c, 3%);
-    border-color: draw_border_color($c);
+    background-color: $c;
+    border-color: $tc;
     @include draw_shadows($button_shadow);
     // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     text-shadow: 0 1px $text_shadow_color;
