@@ -11,13 +11,16 @@
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: darken($fg_color,10%);
+  color: black;
 }
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   border-radius: $base_border_radius;
-  &:selected,&:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
+  &:selected,&:hover { 
+    color: white;
+    background-color: black;  
+  }
 }
 
 .candidate-page-button-box {
