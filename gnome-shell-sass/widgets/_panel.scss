@@ -37,7 +37,7 @@ $panel_height: 1.86em;
     -panel-corner-border-color: transparent;
 
     &:active, &:overview, &:focus {
-      -panel-corner-border-color: lighten($selected_bg_color,5%);
+      -panel-corner-border-color: black;
     }
   }
 
@@ -48,12 +48,8 @@ $panel_height: 1.86em;
     -natural-hpadding: $base_padding * 2;
     -minimum-hpadding: $base_padding;
 
-    &:hover {
-      color: lighten(black, 20%);
-    }
-
     &:active, &:overview, &:focus, &:checked {
-      color: lighten(black, 20%);
+      color: black;
     }
 
     // status area icons
