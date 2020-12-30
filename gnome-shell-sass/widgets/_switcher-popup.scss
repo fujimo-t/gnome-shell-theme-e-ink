@@ -14,13 +14,9 @@
     border-radius: $base_border_radius + 1px;
     border: 1px solid transparent;
 
-    &:outlined {
-      background-color: transparentize($osd_fg_color, 0.7);
-    }
-
-    &:selected {
-      background-color: transparentize($osd_fg_color, 0.7);
-      color: $osd_fg_color;
+    &:selected, &:outlined {
+      color: black;
+      border: 1px solid black;
     }
   }
 
@@ -61,5 +57,5 @@
 
 // Window cycler highlight
 .cycler-highlight {
-  border: 5px solid $selected_bg_color;
+  border: 5px solid black;
 }
