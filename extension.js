@@ -19,23 +19,42 @@
 /* exported init */
 const ExtensionUtils = imports.misc.extensionUtils;
 
+const DESKTOP_INTERFACE_SCHEMA = 'org.gnome.desktop.interface';
+const KEYS_DESKTOP_INTERFACE = {
+    cursorTheme: 'cursor-theme',
+    enableAnimation: 'enable-animations',
+    gtkTheme: 'gtk-theme',
+    iconTheme: 'icon-theme'
+};
+const CURSOR_THEME = 'DMZ-White';
+const GTK_THEME = 'HighContrast';
+const ICON_THEME = 'HighContrast';
+
 class Extension {
     
     constructor() {
-        this._interfaceSettingsId = 'org.gnome.desktop.interface';
-        this._animationKey = 'enable-animations';
     }
 
     enable() {
-        let interfaceSettings = ExtensionUtils.getSettings(this._interfaceSettingsId);
-        this._originalAnimationSetting = interfaceSettings.get_boolean(this._animationKey);
+        let interfaceSettings = ExtensionUtils.getSettings(DESKTOP_INTERFACE_SCHEMA);
 
-        interfaceSettings.set_boolean(this._animationKey, false);
+        // Backup current settings
+        this._backupSettings = new Map();
+        for (const key of Object.values(KEYS_DESKTOP_INTERFACE))
+            this._backupSettings.set(key, interfaceSettings.get_value(key));
+
+        interfaceSettings.set_boolean(KEYS_DESKTOP_INTERFACE.enableAnimation, false);
+        interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.cursorTheme, CURSOR_THEME);
+        interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.gtkTheme, GTK_THEME);
+        interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.iconTheme, ICON_THEME);
     }
 
     disable() {
-        let interfaceSettings = ExtensionUtils.getSettings(this._interfaceSettingsId);
-        interfaceSettings.set_boolean(this._animationKey, this._originalAnimationSetting);
+        let interfaceSettings = ExtensionUtils.getSettings(DESKTOP_INTERFACE_SCHEMA);
+
+        // Restore settings
+        for (const key of Object.values(KEYS_DESKTOP_INTERFACE))
+            interfaceSettings.set_value(key, this._backupSettings.get(key));
     }
 }
 
