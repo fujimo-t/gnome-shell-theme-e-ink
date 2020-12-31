@@ -55,6 +55,8 @@ class Extension {
         // Restore settings
         for (const key of Object.values(KEYS_DESKTOP_INTERFACE))
             interfaceSettings.set_value(key, this._backupSettings.get(key));
+
+        delete this._backupSettings;
     }
 }
 
