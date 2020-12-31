@@ -17,15 +17,25 @@
  */
 
 /* exported init */
+const ExtensionUtils = imports.misc.extensionUtils;
 
 class Extension {
+    
     constructor() {
+        this._interfaceSettingsId = 'org.gnome.desktop.interface';
+        this._animationKey = 'enable-animations';
     }
 
     enable() {
+        let interfaceSettings = ExtensionUtils.getSettings(this._interfaceSettingsId);
+        this._originalAnimationSetting = interfaceSettings.get_boolean(this._animationKey);
+
+        interfaceSettings.set_boolean(this._animationKey, false);
     }
 
     disable() {
+        let interfaceSettings = ExtensionUtils.getSettings(this._interfaceSettingsId);
+        interfaceSettings.set_boolean(this._animationKey, this._originalAnimationSetting);
     }
 }
 
