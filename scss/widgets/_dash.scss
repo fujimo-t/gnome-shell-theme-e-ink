@@ -31,6 +31,11 @@ $dash_border_radius: $modal_radius * 1.5;
   }
 }
 
+.dash-background {
+  color: black;
+  background-color: white;
+}
+
 // Dash Items
 .dash-item-container > StWidget {
   padding: ($dash_spacing / 2) $dash_spacing;
