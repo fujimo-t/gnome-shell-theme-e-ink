@@ -46,9 +46,9 @@ $window_clone_border_size: 6px;
 
 // Close button
 .window-close {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
-  border: none;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   border-radius: $window_close_button_size * 0.5 + $window_close_button_padding * 2;
   padding: $window_close_button_padding;
   height: $window_close_button_size;
