@@ -19,6 +19,12 @@ $window_clone_border_size: 6px;
   padding: $window_picker_padding;
 
   &.external-monitor { padding: $window_picker_padding; }
+  & StIcon.icon-dropshadow {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
 }
 
 // Borders on window thumbnails
