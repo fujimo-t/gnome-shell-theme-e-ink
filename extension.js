@@ -21,12 +21,10 @@ const ExtensionUtils = imports.misc.extensionUtils;
 
 const DESKTOP_INTERFACE_SCHEMA = 'org.gnome.desktop.interface';
 const KEYS_DESKTOP_INTERFACE = {
-    cursorTheme: 'cursor-theme',
     enableAnimation: 'enable-animations',
     gtkTheme: 'gtk-theme',
     iconTheme: 'icon-theme'
 };
-const CURSOR_THEME = 'DMZ-White';
 const GTK_THEME = 'HighContrast';
 const ICON_THEME = 'HighContrast';
 
@@ -44,7 +42,6 @@ class Extension {
             this._backupSettings.set(key, interfaceSettings.get_value(key));
 
         interfaceSettings.set_boolean(KEYS_DESKTOP_INTERFACE.enableAnimation, false);
-        interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.cursorTheme, CURSOR_THEME);
         interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.gtkTheme, GTK_THEME);
         interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.iconTheme, ICON_THEME);
     }
