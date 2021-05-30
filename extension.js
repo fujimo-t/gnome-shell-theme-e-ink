@@ -28,32 +28,48 @@ const KEYS_DESKTOP_INTERFACE = {
 const GTK_THEME = 'HighContrast';
 const ICON_THEME = 'HighContrast';
 
+const DESKTOP_BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
+const KEYS_DESKTOP_BACKGROUND = {
+    pictureOptions: 'picture-options',
+    primaryColor: 'primary-color'
+}
+
 class Extension {
-    
+
     constructor() {
     }
 
     enable() {
         let interfaceSettings = ExtensionUtils.getSettings(DESKTOP_INTERFACE_SCHEMA);
-
-        // Backup current settings
-        this._backupSettings = new Map();
+        // Backup current interface settings
+        this._backupInterfaceSettings = new Map();
         for (const key of Object.values(KEYS_DESKTOP_INTERFACE))
-            this._backupSettings.set(key, interfaceSettings.get_value(key));
-
+            this._backupInterfaceSettings.set(key, interfaceSettings.get_value(key));
+        // Set interface settings for E-Ink monitors
         interfaceSettings.set_boolean(KEYS_DESKTOP_INTERFACE.enableAnimation, false);
         interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.gtkTheme, GTK_THEME);
         interfaceSettings.set_string(KEYS_DESKTOP_INTERFACE.iconTheme, ICON_THEME);
+
+        let backgroundSettings = ExtensionUtils.getSettings(DESKTOP_BACKGROUND_SCHEMA);
+        // Backup current background
+        this._backupBackgroundSettings = new Map();
+        for (const key of Object.values(KEYS_DESKTOP_BACKGROUND))
+            this._backupBackgroundSettings.set(key, backgroundSettings.get_value(key));
+        // Set background to white color
+        backgroundSettings.set_string(KEYS_DESKTOP_BACKGROUND.pictureOptions, 'none');
+        backgroundSettings.set_string(KEYS_DESKTOP_BACKGROUND.primaryColor, '#ffffff');
     }
 
     disable() {
         let interfaceSettings = ExtensionUtils.getSettings(DESKTOP_INTERFACE_SCHEMA);
-
-        // Restore settings
         for (const key of Object.values(KEYS_DESKTOP_INTERFACE))
-            interfaceSettings.set_value(key, this._backupSettings.get(key));
+            interfaceSettings.set_value(key, this._backupInterfaceSettings.get(key));
+        delete this._backupInterfaceSettings;
 
-        delete this._backupSettings;
+        let backgroundSettings = ExtensionUtils.getSettings(DESKTOP_BACKGROUND_SCHEMA);
+        for (const key of Object.values(KEYS_DESKTOP_BACKGROUND))
+            backgroundSettings.set_value(key, this._backupBackgroundSettings.get(key));
+        delete this._backupBackgroundSettings;
     }
 }
 

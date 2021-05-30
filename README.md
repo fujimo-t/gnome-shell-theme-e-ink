@@ -4,6 +4,7 @@
 
 * Switch Shell, GTK and icon theme to light high contrast one
 * Disable animations
+* Change background to white color
 
 ## Dependencies
 
