@@ -3,6 +3,6 @@
   "description": "Make desktop suitable for E Ink monitors",
   "uuid": "e-ink-mode@fujimo-t.github.io",
   "url": "https://github.com/fujimo-t/gnome-shell-extension-e-ink-mode",
-  "version": 2,
+  "version": 3,
   "shell-version": ["40"]
 }
