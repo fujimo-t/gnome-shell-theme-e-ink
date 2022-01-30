@@ -1,4 +1,12 @@
 #!/bin/bash
 
-sass scss/stylesheet.scss > stylesheet.css
-zip -r e-ink-mode@fujimo-t.github.io.zip . -x scss/\* .\* `basename $0` README.md
+THEME_DIR="E-Ink/gnome-shell"
+
+if [ -d $THEME_DIR ] 
+then
+  rm -rf $THEME_DIR
+fi
+
+mkdir -p $THEME_DIR
+sass scss/gnome-shell.scss > "$THEME_DIR/gnome-shell.css"
+zip -r E-Ink.zip $THEME_DIR

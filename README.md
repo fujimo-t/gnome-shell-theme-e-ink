@@ -1,11 +1,12 @@
-# GNOME Shell Extension: E Ink Mode
+# GNOME Shell Theme: E-Ink
 
-## Features
+* White background with black borders
+* Suitable for E-Ink displays
 
-* Switch Shell, GTK and icon theme to light high contrast one
-* Disable animations
-* Change background to white color
+![Screenshot](./screenshot.jpg)
 
-## Dependencies
+## Install
 
-* `High Constrast` theme for GTK and icon
+1. Install [User Themes](https://extensions.gnome.org/extension/19/user-themes/) and [Gnome Tweaks](https://wiki.gnome.org/Apps/Tweaks)
+1. Download zip file 
+2. Open it from `Tweaks > Appearance > Thems`
