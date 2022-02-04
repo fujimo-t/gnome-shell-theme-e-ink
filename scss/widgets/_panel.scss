@@ -44,7 +44,7 @@ $panel_height: 1.86em;
   // panel menus
   .panel-button {
     font-weight: bold;
-    color: black;
+    color: black !important;
     -natural-hpadding: $base_padding * 2;
     -minimum-hpadding: $base_padding;
 
