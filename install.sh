@@ -1,6 +1,7 @@
 #!/bin/bash
 
 THEME_DIR="E-Ink/gnome-shell"
+INSTALL_DIR="$HOME/.local/share/themes/E-Ink/"
 
 if [ -d $THEME_DIR ] 
 then
@@ -10,4 +11,6 @@ fi
 mkdir -p $THEME_DIR
 sass gnome-shell-high-contrast.scss > "$THEME_DIR/gnome-shell.css"
 cp -r toggle-off-custom.svg "$THEME_DIR/"
-zip -r E-Ink.zip $THEME_DIR
+
+mkdir -p $INSTALL_DIR
+cp -r $THEME_DIR $INSTALL_DIR

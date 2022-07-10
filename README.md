@@ -1,9 +1,9 @@
 # GNOME Shell Theme: E-Ink
 
-* White background with black borders
 * Suitable for E-Ink displays
+* Based on default theme on GNOME Classic session and just added small fixes to use on normal GNOME Shell session
 
-![Screenshot](./screenshot.jpg)
+![Screenshot](./screenshot.png)
 
 ## Install
 
