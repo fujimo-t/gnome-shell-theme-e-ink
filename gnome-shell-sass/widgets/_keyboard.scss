@@ -3,6 +3,7 @@
 $key_size: 1.2em;
 $key_border_radius: $base_border_radius + 4px; // 12px
 $key_bg_color:  darken($osd_fg_color, 70%);
+$key_fg_color:  darken($osd_bg_color, 10%);
 // $default_key_bg_color: darken($key_bg_color, 4%);
 $default_key_bg_color: if($variant=='light', darken($key_bg_color, 11%), darken($key_bg_color, 10%));
 
@@ -41,12 +42,12 @@ $default_key_bg_color: if($variant=='light', darken($key_bg_color, 11%), darken(
   border-radius: $key_border_radius;
   box-shadow: 0 1px 0 0 $shadow_color;
 
-  @include keyboard_key(normal, $key_bg_color, $osd_fg_color);
+  @include keyboard_key(normal, $key_bg_color, $key_fg_color);
 
   &:focus { @include keyboard_key(focus);}
-  &:hover { @include keyboard_key(hover, $key_bg_color, $osd_fg_color);}
-  &:active { @include keyboard_key(active, $key_bg_color, $osd_fg_color); }
-  &:checked { @include keyboard_key(checked, $key_bg_color, $osd_fg_color); }
+  &:hover { @include keyboard_key(hover, $key_bg_color, $key_fg_color);}
+  &:active { @include keyboard_key(active, $key_bg_color, $key_fg_color); }
+  &:checked { @include keyboard_key(checked, $key_bg_color, $key_fg_color); }
 
   &:grayed { //FIXMEy
     background-color: darken($bg_color, 3%);
@@ -56,10 +57,10 @@ $default_key_bg_color: if($variant=='light', darken($key_bg_color, 11%), darken(
 
   // non-character keys
   &.default-key {
-    @include keyboard_key(normal, $default_key_bg_color, $osd_fg_color);
-    &:hover {@include keyboard_key(hover, $default_key_bg_color, $osd_fg_color);}
-    &:active { @include keyboard_key(active, $default_key_bg_color, $osd_fg_color);}
-    &:checked { @include keyboard_key(checked, $default_key_bg_color, $osd_fg_color);}
+    @include keyboard_key(normal, $default_key_bg_color, $key_fg_color);
+    &:hover {@include keyboard_key(hover, $default_key_bg_color, $key_fg_color);}
+    &:active { @include keyboard_key(active, $default_key_bg_color, $key_fg_color);}
+    &:checked { @include keyboard_key(checked, $default_key_bg_color, $key_fg_color);}
     border-radius: $key_border_radius;
   }
 
