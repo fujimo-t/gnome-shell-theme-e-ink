@@ -9,5 +9,5 @@ fi
 
 mkdir -p $THEME_DIR
 sass gnome-shell-high-contrast.scss > "$THEME_DIR/gnome-shell.css"
-cp -r toggle-off-custom.svg "$THEME_DIR/"
+cp -r *.svg "$THEME_DIR/"
 zip -r E-Ink.zip $THEME_DIR
