@@ -8,6 +8,5 @@ then
 fi
 
 mkdir -p $THEME_DIR
-sass gnome-shell-high-contrast.scss > "$THEME_DIR/gnome-shell.css"
-cp -r *.svg "$THEME_DIR/"
+sass gnome-shell-light.scss > "$THEME_DIR/gnome-shell.css"
 zip -r E-Ink.zip $THEME_DIR
