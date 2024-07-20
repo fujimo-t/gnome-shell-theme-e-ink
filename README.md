@@ -1,7 +1,7 @@
 # GNOME Shell Theme: E-Ink
 
 * Suitable for E-Ink displays
-* Based on [light style](https://extensions.gnome.org/extension/6198/light-style/) and just added small changes 
+* Based on the default high contrast theme and inverted colors and added small changes 
 
 ![Screenshot](./screenshot.png)
 

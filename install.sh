@@ -9,7 +9,7 @@ then
 fi
 
 mkdir -p $THEME_DIR
-sass gnome-shell-light.scss > "$THEME_DIR/gnome-shell.css"
+sass gnome-shell-high-contrast.scss > "$THEME_DIR/gnome-shell.css"
 
 mkdir -p $INSTALL_DIR
 cp -r $THEME_DIR $INSTALL_DIR

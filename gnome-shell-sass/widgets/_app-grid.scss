@@ -104,7 +104,7 @@ $app_folder_size: 720px;
 
   & .page-navigation-arrow {
     @include button(normal, $tc:$system_fg_color, $c:$system_overlay_bg_color, $style: flat, $always_dark: true);
-    &:hover { @include button(active, $tc:$system_fg_color, $c:$system_overlay_bg_color, $style: flat, $always_dark: true);}
+    &:hover { @include button(hover, $tc:$system_fg_color, $c:$system_overlay_bg_color, $style: flat, $always_dark: true);}
     &:active { @include button(active, $tc:$system_fg_color, $c:$system_overlay_bg_color, $style: flat, $always_dark: true);}
   }
 
