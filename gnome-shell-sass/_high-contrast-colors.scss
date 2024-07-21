@@ -38,12 +38,12 @@ $borders_color: $dark_5;
 $outer_borders_color: $borders_color;
 
 // osd colors
-$osd_borders_color: transparentize($osd_fg_color, 0.8);
+$osd_borders_color: $borders_color;
 $osd_outer_borders_color: $osd_borders_color;
 
 // system colors
 $system_bg_color: lighten($system_base_color, 5%);
-$system_borders_color: transparentize($system_fg_color, .9);
+$system_borders_color: $borders_color;
 $system_insensitive_fg_color: mix($system_fg_color, $system_bg_color, 50%);
 $system_overlay_bg_color: mix($system_bg_color, $system_fg_color, 90%);
 
@@ -72,7 +72,7 @@ $selected_borders_color: lighten($selected_bg_color, 30%);
 //
 
 // color for outline drawn onto all elements (may be a border or a box-shadow)
-$hc_inset_color: transparentize($fg_color, 0.6);
+$hc_inset_color: $fg_color;
 
 // color used in a mixin in _drawing to boost a color's contrast
 $hc_mix_color: $light_1;
