@@ -234,18 +234,12 @@ stage {
 
 // tooltip
 %tooltip {
-  background-color: transparentize(black, 0.1);
-  border: 1px solid transparentize($light_1, 0.9);
-  color: $light_1;
-
+  color: $fg_color;
+  background-color: $bg_color;
+  border: 1px solid $borders_color;
   border-radius: $forced_circular_radius;
   padding: $base_padding $base_padding * 2;
   text-align: center;
-
-  @if $contrast == 'high' {
-    background-color: black;
-    border-color: $hc_inset_color;
-  }
 }
 
 /* General Typography */
