@@ -1,7 +1,7 @@
 # GNOME Shell Theme: E-Ink
 
 * Suitable for E-Ink displays
-* Based on the default high contrast theme and inverted colors and added small changes 
+* Based on the default high contrast theme (invert colors and add small changes) 
 
 ![Screenshot](./screenshot.png)
 
